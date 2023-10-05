@@ -11,8 +11,11 @@ doesKeyExist(obj1, 'name'); // => false
 ***********************************************************************/
 
 function doesKeyExist(obj, key) {
-  // Your code here 
-}
-
+    return obj.hasOwnProperty(key)
+    // Your code here
+  }
+let obj1 = {bootcamp: 'App Academy', course: 'Bootcamp Prep'}
+console.log(doesKeyExist(obj1, 'course')); // => true
+console.log(doesKeyExist(obj1, 'name')); // => false
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = doesKeyExist;
