@@ -19,12 +19,12 @@ for(let i =0; i < array.length; i++){
   let ele = array[i]//
   // console.log(ele)
   if(count[ele] === undefined){
-  count[ele] = 1
+   count[ele] = 1
   }else {
-    count[ele]++
+     count[ele]++
   }
 }
-
+return count
 }
 console.log(arrayConverter(["apple", "apple"])); // => {apple: 2}
 console.log(arrayConverter(["mango", "pineapple"])); // => {mango: 1, pineapple: 1}
