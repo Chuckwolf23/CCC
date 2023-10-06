@@ -12,8 +12,22 @@ console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {app
 ***********************************************************************/
 
 function arrayConverter(array) {
-  // Your code here 
+  //create a counter placement variable
+  let count ={}
+// itterate throught the array
+for(let i =0; i < array.length; i++){
+  let ele = array[i]//
+  // console.log(ele)
+  if(count[ele] === undefined){
+  count[ele] = 1
+  }else {
+    count[ele]++
+  }
 }
 
+}
+console.log(arrayConverter(["apple", "apple"])); // => {apple: 2}
+console.log(arrayConverter(["mango", "pineapple"])); // => {mango: 1, pineapple: 1}
+console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {apple: 1, banana: 2, potato: 1}
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = arrayConverter;
